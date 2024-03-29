@@ -1,4 +1,4 @@
-import math
+from math import sqrt, pi
 
 
 class Circle:
@@ -6,7 +6,7 @@ class Circle:
     def circle_area(radius: int | float) -> float:
         '''Вычисляет площадь круга.'''
 
-        return math.pi * (radius**2)
+        return pi * (radius**2)
 
 
 class Triangle:
@@ -20,7 +20,7 @@ class Triangle:
 
         p = (first_side + second_side + third_side) / 2
         try:
-            return math.sqrt(
+            return sqrt(
                 p * (p - first_side) * (p - second_side) * (p - third_side)
             )
         except ValueError:
